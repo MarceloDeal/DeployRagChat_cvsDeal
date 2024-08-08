@@ -4,19 +4,7 @@ import streamlit as st
 
 from utils import cria_chain_conversa, PASTA_ARQUIVOS
 
-st.set_page_config(
-    page_title="Tec. Recruiter",
-    page_icon=":shark:",
-    layout="wide",
-    initial_sidebar_state="expanded",
-    theme={
-        'primaryColor': '#FF4B4B',
-        'backgroundColor': '#FFFFFF',
-        'secondaryBackgroundColor': '#F0F0F5',
-        'textColor': '#262730',
-        'font': 'sans serif'
-    }
-)
+
 
 def sidebar():
     uploaded_pdfs = st.file_uploader(
