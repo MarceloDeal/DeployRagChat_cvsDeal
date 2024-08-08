@@ -32,7 +32,7 @@ def sidebar():
 
 
 def chat_window():
-    st.header('🧑‍💻 Analise de Perfis de Candidatos - Deal Technologies', divider=True)
+    st.header('🧑‍💻 Sou seu assistente para analise de perfis - Vamos lá!', divider=True)
 
     if not 'chain' in st.session_state:
         st.error('Faça o upload de PDFs para começar!')
