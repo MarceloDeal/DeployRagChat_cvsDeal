@@ -36,7 +36,7 @@ def login_page():
 def home_page():
     st.title("DEAL TALENT - AVALIAÇÃO DE PERFIS")
     try:
-        with open("home.py", 'r', encoding='utf-8') as f:
+        with open("Home.py", 'r', encoding='utf-8') as f:
             exec(f.read(), globals())
     except FileNotFoundError:
         st.error("Arquivo home.py não encontrado.")
