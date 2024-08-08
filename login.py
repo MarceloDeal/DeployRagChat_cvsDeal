@@ -2,6 +2,17 @@ import streamlit as st
 import json
 import os
 
+st.markdown(
+    """
+    <style>
+    .header-font {
+        font-size:35px !important;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 # Função para carregar dados de login do arquivo JSON
 def load_login_data():
     try:
@@ -34,7 +45,9 @@ def login_page():
 
 # Página home
 def home_page():
-    st.title("DEAL TALENT - AVALIAÇÃO DE PERFIS")
+    st.image("img/logodeal.jpg", width=200) 
+    ##st.title("DEAL TALENT - AVALIAÇÃO DE PERFIS")
+    st.markdown('<p class="header-font"><b>DEAL TALENT - AVALIAÇÃO DE PERFIS</b></p>', unsafe_allow_html=True)
     try:
         with open("Home.py", 'r', encoding='utf-8') as f:
             exec(f.read(), globals())

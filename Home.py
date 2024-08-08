@@ -4,7 +4,16 @@ import streamlit as st
 
 from utils import cria_chain_conversa, PASTA_ARQUIVOS
 
-
+st.markdown(
+    """
+    <style>
+    .header-font {
+        font-size:20px !important;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 def sidebar():
     uploaded_pdfs = st.file_uploader(
@@ -32,10 +41,11 @@ def sidebar():
 
 
 def chat_window():
-    st.header('🧑‍💻 Sou seu assistente para analise de perfis - Vamos lá!', divider=True)
+    ##st.header('🧑‍💻 Sou seu assistente para analise de perfis - Vamos lá!', divider=True)
+    st.markdown('<p class="header-font">🧑‍💻 Sou seu assistente para analise de perfis - Vamos lá!</p>', unsafe_allow_html=True)
 
     if not 'chain' in st.session_state:
-        st.error('Faça o upload de PDFs para começar!')
+        st.error('Faça o upload dos CVs e inicie o ChatBot!')
         st.stop()
     
     chain = st.session_state['chain']
