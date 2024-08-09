@@ -41,7 +41,7 @@ def sidebar():
 
 
 def chat_window():
-    ##st.header('🧑‍💻 Sou seu assistente para analise de perfis - Vamos lá!', divider=True)
+
     st.markdown('<p class="header-font">🧑‍💻 Sou seu assistente para analise de perfis - Vamos lá!</p>', unsafe_allow_html=True)
 
     if not 'chain' in st.session_state:
